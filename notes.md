@@ -43,3 +43,14 @@
 - run nodemon type 'npm run server' or whatever name the script is (in this case
   server is the name of the script to run the server in this project)
 -
+
+## using Prettier
+
+- when autoformating things you don't want to format put // prettier-ignore before that line and it will ignore that function
+
+## post request
+
+- Information is send via JSON but JS doesn't read JSON we need to change it to something that the server can read and use
+- use express middleware to help add functionality to express
+- server.use(express.json)
+- middleware that lets express read JSON data
