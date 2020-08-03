@@ -37,11 +37,22 @@ server.post("/users", (req, res) => {
 	res.status(201).json(users);
 });
 
+//delete a user
+server.delete("/users/:name", (req, res) => {
+	const name = req.params.name.toLocaleLowerCase();
+
+	users = users.filter((user) => user.name.toLocaleLowerCase() !== name);
+
+	//ends the request without sending data
+	res.status(204).end();
+});
+
 //make and endpoint `/accounts` that sends an array with 3 accounts, each account should have a unique `id` and a `name` property
 server.get("/accounts", (req, res) => {
 	res.status(200).json(accounts);
 });
 
+//add an account
 server.post("/accounts", (req, res) => {
 	const account = req.body;
 	account.id = shortid.generate();
