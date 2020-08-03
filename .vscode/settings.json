@@ -1,6 +1,6 @@
 {
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "prettier.proseWrap": "always",
-    "prettier.useTabs": true
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "prettier.useTabs": true,
+  "prettier.bracketSpacing": false
 }
